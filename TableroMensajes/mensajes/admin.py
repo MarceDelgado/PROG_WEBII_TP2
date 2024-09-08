@@ -1,9 +1,8 @@
 from django.contrib import admin
-from mensajes.models import Mensaje
+from .models import Mensaje
 
 class MensajeAdmin(admin.ModelAdmin):
-    list_display = ("remotente", "destinatario", "texto", "fecha_hora")
-    admin.site.register(Mensaje, MensajeAdmin)
-    
+    list_display = ("remitente", "destinatario", "texto", "fecha_hora")
 
-# Register your models here.
+
+admin.site.register(Mensaje, MensajeAdmin)
